@@ -8,20 +8,13 @@
     <!-- Incluindo Fontes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Usando Inter como sans, e Playfair Display como fallback serif dramático (ou instrumental) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Playfair+Display:ital,wght@1,800&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
   </head>
   <body class="bg-[#0D0D0D] text-[#FAF6DF] font-sans antialiased overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     
     <!-- SVG Noise global -->
-    <svg style="position: fixed; top: 0; left: 0; width: 0; height: 0; pointer-events: none;">
-      <filter id="noise">
-        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
-        <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.05 0" />
-      </filter>
-    </svg>
-    <div class="pointer-events-none fixed inset-0 z-50 w-screen h-screen opacity-50" style="backdrop-filter: url(#noise);"></div>
+    <div class="noise-overlay"></div>
   </body>
 </html>

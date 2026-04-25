@@ -14,9 +14,19 @@ export default {
         textMain: "#FAF6DF"      // Bege Suave
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Inter como Gilroy substituta
-        serif: ['Playfair Display', 'serif'], // Dramatic Italic Serif
+        sans: ['Prompt', 'sans-serif'],
+        headline: ['Commissioner', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
         mono: ['Space Mono', 'monospace'],
+      },
+      keyframes: {
+        'marquee-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        }
+      },
+      animation: {
+        'marquee-right': 'marquee-right 80s linear infinite',
       }
     },
   },
